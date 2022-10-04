@@ -1,5 +1,9 @@
-import { cartDAO } from '../DAO/cartDAO.js'
-import { userDAO } from '../DAO/userDAO.js'
+import { CartDAO } from '../DAO/cartDAO.js'
+import { UserDAO } from '../DAO/userDAO.js'
+import { User } from '../models/userModel.js'
+
+const cartDAO = CartDAO.getInstance()
+const userDAO = UserDAO.getInstance()
 
 const loginController = async (req, res) => {
     if(req.isAuthenticated()){

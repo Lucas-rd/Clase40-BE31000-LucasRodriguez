@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path';
 import { Server } from 'socket.io'
-import { chatDAO } from './DAO/chatDAO.js';
+import { ChatDAO } from './DAO/chatDAO.js';
 import { normalizedMessages } from './utils/normalize.js';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
@@ -23,6 +23,7 @@ import os from 'os';
 const cpus = os.cpus()
 
 const yargsOptions = yargs(process.argv.slice(2))
+const chatDAO = ChatDAO.getInstance()
 
 const args = yargsOptions.alias({
   p: "port",

@@ -1,6 +1,8 @@
-import { productDAO } from "../DAO/productDAO.js"
+import { ProductDAO } from "../DAO/productDAO.js"
 import { validateAdmin } from "../utils/adminValidation.js"
 import logger from "../utils/logger.js"
+
+const productDAO = ProductDAO.getInstance()
 
 const getAllProductsController = async (req, res) => {
     try {

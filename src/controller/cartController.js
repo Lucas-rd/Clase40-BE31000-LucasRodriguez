@@ -1,8 +1,11 @@
-import { cartDAO } from "../DAO/cartDAO.js";
-import { productDAO } from "../DAO/productDAO.js";
+import { CartDAO } from "../DAO/cartDAO.js";
+import { ProductDAO } from "../DAO/productDAO.js";
 import { mailOptions, transporter } from "../utils/nodemailer.js";
 import { smsClient, smsOptions } from "../utils/twilioSms.js";
 import { whatsappClient, whatsappOptions } from "../utils/twilioWatsapp.js";
+
+const productDAO = ProductDAO.getInstance()
+const cartDAO = CartDAO.getInstance()
 
 const cartControllerGet = async (req, res) => {
     try {

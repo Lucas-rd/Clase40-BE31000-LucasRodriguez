@@ -1,1 +1,2 @@
 {"level":"warn","message":"Ruta /login con metodo GET no implementadas en el servidor."}
+{"level":"warn","message":"Ruta /user/ con metodo GET no implementadas en el servidor."}

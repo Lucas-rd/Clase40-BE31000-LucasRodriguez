@@ -1,5 +1,7 @@
-import { cartDAO } from "../DAO/cartDAO.js"
+import { CartDAO } from "../DAO/cartDAO.js"
 import { mailOptions, transporter } from "../utils/nodemailer.js"
+
+const cartDAO = CartDAO.getInstance()
 
 const registerController = async(req, res) =>{
     
